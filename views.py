@@ -28,7 +28,7 @@ def meetingdetails(request, id):
     return render(request, 'pythonclubapp/meetingdetails.html', context=context)
 
 def newMeeting(request):
-    from=MeetingForm
+    form=MeetingForm
     if request.method=='POST':
         form=MeetingForm(request.POST)
         if form.is_valid():
@@ -40,7 +40,7 @@ def newMeeting(request):
     return render(request, 'pythonclubapp/newmeeting.html', {'form':form})
 
 def newMeetingMinutes(request):
-    from=MeetingMinutesForm
+    form=MeetingMinutesForm
     if request.method=='POST':
         form=MeetingMinutesForm(request.POST)
         if form.is_valid():
@@ -52,7 +52,7 @@ def newMeetingMinutes(request):
     return render(request, 'pythonclubapp/newmeetingminutes.html', {'form':form})
 
 def newResource(request):
-    from=ResourceForm
+    form=ResourceForm
     if request.method=='POST':
         form=ResourceForm(request.POST)
         if form.is_valid():
@@ -64,7 +64,7 @@ def newResource(request):
     return render(request, 'pythonclubapp/newresource.html', {'form':form})
 
 def newEvent(request):
-    from=EventForm
+    form=EventForm
     if request.method=='POST':
         form=EventForm(request.POST)
         if form.is_valid():
